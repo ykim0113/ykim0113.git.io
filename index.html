@@ -13,6 +13,7 @@ insert it: Tab / Header / Main Page
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="script.js"></script>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
@@ -21,12 +22,18 @@ body, html {
     line-height: 1.8;
 }
 
-/**image size**/
-
-.w3-row img {
+/**circle image**/
+/*.w3-row img {
     border-radius: 50%;
     margin-right: 60px;
     margin-top: 10px;
+}*/
+
+.circular img {
+    border-radius: 50%;
+    margin-right: 60px;
+    margin-top: 10px;
+
 }
 
 .col3-img img {
@@ -42,6 +49,51 @@ body, html {
 }
 
 
+
+
+
+/**portfolio image hover text effect**/
+.grid-container {
+  position: relative;
+  width: 100%;
+}
+
+.grid-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.grid-container:hover .grid-overlay {
+  opacity: 1;
+}
+
+.grid-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: fixed;
@@ -49,6 +101,8 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
@@ -95,9 +149,9 @@ body, html {
   padding-left: 70px;
 }
 
-
-/**Hover text**/
-
+.title-wrapper {
+    padding-bottom: 40px;
+}
 
 
 /** 3 col system
@@ -161,8 +215,8 @@ body, html {
       <i class="fa fa-bars"></i>
     </a>
     <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="about.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="projects.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> EXPERIENCE</a>
+    <a href="projects.html" class="w3-bar-item w3-button w3-hide-small"> PROJECTS</a>
+    <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-small"> PORTFOLIO</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
     </a>
@@ -179,31 +233,54 @@ body, html {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Ye -<span class="w3-hide-small"> Ji</span> Kim hello world</span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Ye -<span class="w3-hide-small"> Ji</span> Kim</span>
   </div>
 </div>
+
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em><i>Designer, Programmer<br>Computational Media,  Georgia Institue of Technology 2020</i></em></p>
+
+    <p class="w3-center"><em><i>Designer, Programmer<br>Computational Media,  Georgia Institue of Technology 2020</i></em></p>
+
 <!--   <h5><i><center>Rather than pictures, I like filled palettes - IU</center></i></h5> -->
+
   <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-   <!--    <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br> -->
-      <img src="assets/profile.jpg" class="w3-round w3-image alt pad="Photo of Me" width="300" height="200">
+    <div class="w3-col m6 w3-center w3-padding-large circular w3-hide-small">
+      <img src="assets/profile.jpg" class="w3-round w3-image" alt pad="Photo of Me" width="300" height="200">
     </div>
 
     <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
+    <div class="w3-col m6 w3-padding-large">
       <p>Hello, my name is Ye-Ji Kim and I am a university student studying Computational Media at Georgia Tech.<br>
       As a student, I spend my time attending classes, learning what I
         love, and meeting great people.<br>
         I wish to one day to create something inspirational that would overcome all differences we have.</p>
     </div>
   </div>
+
 </div>
 
+
+
+  <!--javascript-->
+<!--   <button onClick = "revealMessage()">Click me</button>
+  <div id = "hiddenMessage" style = "display:none"> -->
+    <!--putting inside div makes all of them hidden-->
+<!--     <p id ="headline"> Surprise!</p>
+    <p id ="concatenate"></p>
+    <button id = "countDownButton" onClick ="countDown()">10</button>
+
+    <button id ="add-Item" onClick="addItem()">Add Item</button>
+
+
+      <ul id ="our-list">
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+      </ul>
+  </div> -->
 
 
 <!-- Container (Portfolio Section) -->
@@ -213,44 +290,86 @@ body, html {
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <!--Hover text effect: Title, Subtitle-->
   <div class="w3-row-padding w3-center col4-img">
+
     <div class="w3-col m3">
-      <a href = "projects.html"><img src="assets/portfolio/bisSistercover.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="bigSister"></a>
+        <div class = "grid-container">
+              <img src="assets/cover/bisSistercover.png" style="width:100%" alt="bigSister" class="grid-image">
+              <div class ="grid-overlay">
+                <div class="grid-text">Android App UI/UX</div>
+             </div>
+         </div>
     </div>
 
     <div class="w3-col m3">
-      <a href = "projects.html"><img src="assets/portfolio/sketchrain_cover.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch_rain cover"></a>
+            <div class = "grid-container">
+              <img src="assets/cover/sketchrain_cover.png" style="width:100%" onclick="onClick(this)" class="grid-image" alt="sketch_rain cover">
+              <div class ="grid-overlay">
+                <div class="grid-text">Sound Responsive Drawing Tool</div>
+             </div>
+         </div>
     </div>
+
 
     <div class="w3-col m3">
-      <a href = "projects.html"><img src="assets/portfolio/rooftop_cover.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="rooftop cover"></a>
+        <div class = "grid-container">
+              <img src="assets/cover/rooftop_cover.jpg" style="width:100%" onclick="onClick(this)" class="grid-image" alt="rooftop cover">
+              <div class ="grid-overlay">
+                <div class="grid-text">Web Application</div>
+             </div>
+         </div>
     </div>
 
 
     <div class="w3-col m3">
-      <a href = "projects.html"><img src="assets/portfolio/infographic_cover.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="infographic"></a>
+        <div class = "grid-container">
+              <img src="assets/cover/infographic_cover.jpeg" style="width:100%" onclick="onClick(this)" class="grid-image" alt="rooftop cover">
+              <div class ="grid-overlay">
+                <div class="grid-text">Infographic Design</div>
+             </div>
+         </div>
     </div>
+
+
 
     <!--row2: portfolio (visual design, photo, illustration)-->
     <div class="w3-col m3 mar-top-bottom">
-      <a href = "projects.html"><img src="assets/portfolio/gridDesign.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="grid design"></a>
+        <div class = "grid-container">
+              <img src="assets/cover/gridDesign.png" style="width:100%" onclick="onClick(this)" class="grid-image" alt="rooftop cover">
+              <div class ="grid-overlay">
+                <div class="grid-text">Publication Design</div>
+             </div>
+         </div>
     </div>
 
     <div class="w3-col m3 mar-top-bottom">
-      <a href = "projects.html"><img src="assets/portfolio/logo_cover.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="logo design"></a>
+        <div class = "grid-container">
+              <img src="assets/cover/logo_cover.png" style="width:100%" onclick="onClick(this)" class="grid-image" alt="rooftop cover">
+              <div class ="grid-overlay">
+                <div class="grid-text">Logo Design</div>
+             </div>
+         </div>
     </div>
 
     <div class="w3-col m3 mar-top-bottom">
-      <a href = "projects.html"><img src="assets/portfolio/camera.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="photography"></a>
+        <div class = "grid-container">
+              <img src="assets/cover/photo.png" style="width:100%" onclick="onClick(this)" class="grid-image" alt="rooftop cover">
+              <div class ="grid-overlay">
+                <div class="grid-text">Photography</div>
+             </div>
+         </div>
     </div>
 
+    <div class="w3-col m3 mar-top-bottom">
+        <div class = "grid-container">
+              <img src="assets/cover/photo.png" style="width:100%" onclick="onClick(this)" class="grid-image" alt="rooftop cover">
+              <div class ="grid-overlay">
+                <div class="grid-text">Photography</div>
+             </div>
+         </div>
+    </div>
 
-
- <!--    <div class="w3-col m3">
-      <img src="assets/portfolio/bigSister.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="bigSister Android App Prototype">
-    </div> -->
   </div>
 
-<!--     <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button> -->
   </div>
 </div>
 
@@ -263,20 +382,11 @@ body, html {
   </div>
 </div>
 
-<!-- Third Parallax Image with Portfolio Text -->
-<!-- <div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div>
-</div> -->
 
 
 
-
-
-
-<div class="w3-row-padding w3-center">
-    <h3 class="w3-center" style="padding-bottom:40px">SKILLS</h3>
+<div class="w3-row-padding w3-center w3-content w3-container w3-padding-64">
+    <h3 class="w3-center title-wrapper">SKILLS</h3>
     <div class="w3-col m3">
         <i class="fa fa-code-fork w3-hover-opacity"></i>
         <h4>Programming</h4>
@@ -297,8 +407,7 @@ body, html {
         <h4>Language</h4>
         <p>English (Fluent)<br>Korean (Native)<br>Spanish (Elementary)</p>
     </div>
-<!--     <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px"><a href /"YejiKimResume.pdf">
-    Download Resume</a></button> -->
+
 <!--       <p class="w3-large w3-center w3-padding-16">Skills:</p>
   <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
   <div class="w3-light-grey">
@@ -314,20 +423,46 @@ body, html {
   </div> -->
 </div>
 
+
+
+
+
+<!--
+
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large circular">
+      <img src="assets/profile.jpg" class="w3-round w3-image" alt pad="Photo of Me" width="300" height="200">
+    </div>
+
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>Hello, my name is Ye-Ji Kim and I am a university student studying Computational Media at Georgia Tech.<br>
+      As a student, I spend my time attending classes, learning what I
+        love, and meeting great people.<br>
+        I wish to one day to create something inspirational that would overcome all differences we have.</p>
+    </div>
+  </div> -->
+
+
+
+
+
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">CONTACT</h3>
+  <h3 class="w3-center title-wrapper">CONTACT</h3>
 
-  <div class="w3-row w3-padding-32 w3-section">
+  <div class="w3-row">
 <!--     <div class="w3-col m4 w3-container">
       <div class="w3-round-large w3-greyscale bgimg-2" style="width:100%;height:400px;"></div>
     </div> -->
-    <div class=" m8 w3-panel">
+    <div class="w3-col m6 w3-center w3-padding-large">
       <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Atlanta, GA<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 706-616-2722<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: ykim0113@gmail.com<br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right" style="padding-bottom: 20px"></i> Atlanta, GA<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right" style="padding-bottom: 20px"></i>706-616-2722<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right" style="padding-bottom: 20px"></i>ykim0113@gmail.com<br>
       </div>
+    </div>
+
+    <div class="w3-col m6 w3-center w3-padding-large w3-hide-small">
       <form action="/action_page.php" target="_blank">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
@@ -343,8 +478,13 @@ body, html {
         </button>
       </form>
     </div>
+
   </div>
 </div>
+
+
+
+
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
@@ -356,58 +496,9 @@ body, html {
   </div>
 </footer>
 
-<!-- Add Google Maps -->
-<script>
-function myMap()
-{
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
+<!--Google Map-->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+ -->
 
 </body>
 </html>
