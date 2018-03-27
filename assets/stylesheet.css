@@ -8,10 +8,6 @@ body {
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary
 {display:block}
 
-p {
-    font-size: 2em;
-}
-
 audio,canvas,progress,video {display:inline-block}
 progress{vertical-align:baseline}
 audio:not([controls]){display:none;height:0}[hidden],template{display:none}
@@ -92,9 +88,6 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-col.m3,.w3-quarter{
     width:24.99999%
 }
-
-
-
 .w3-col.m4,.w3-third{width:33.33333%}
 .w3-col.m5{width:41.66666%}
 .w3-col.m6,.w3-half{width:49.99999%}
@@ -281,9 +274,3 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-border-pale-red,.w3-hover-border-pale-red:hover{border-color:#ffe7e7!important}.w3-border-pale-green,.w3-hover-border-pale-green:hover{border-color:#e7ffe7!important}
 .w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
 
-/**video**/
-.video {
-    display: inline-block;
-    height: 400px;
-    width: 500px;
-}
