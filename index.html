@@ -1,554 +1,694 @@
-<!--Always up to date
-Set's its colors to Pantone's color of the year
-JavaScript? API
-Get color values in hex
-insert it: Tab / Header / Main Page
--->
-
 <!DOCTYPE html>
 <html>
-<title>Ye-Ji Kim</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="script.js"></script>
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-    height: 100%;
-    color: #777;
-    line-height: 1.8;
-}
+<head>
+    <title>Main Page</title>
 
-/**circle image**/
-/*.w3-row img {
-    border-radius: 50%;
-    margin-right: 60px;
-    margin-top: 10px;
-}*/
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
 
-.circular img {
-    border-radius: 50%;
-    margin-right: 60px;
-    margin-top: 10px;
+    <!-- Bootstrap 4 -->
+<!--     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> -->
 
-}
+    <!-- Referring to downloaded Bootstrap JS file -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
 
-.col3-img img {
-   width: 60px;
-/*   height: auto;*/
-  height: 330px;
-}
+    <!-- Required jQuery file -->
+    <script   src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
 
-.col4-img img {
-   width: 60px;
-/*   height: auto;*/
-  height: 218px;
-}
+    <!-- Cutsom style -->
+    <style type="text/css">
 
+        @import 'https://fonts.googleapis.com/css?family=Raleway';
 
+        h3 {
+            text-align: center;
+        }
 
+        .bg {
+            background-image:"main_banner.jpg";
+            /* Full height */
+            height: 50%;
 
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
-/**portfolio image hover text effect**/
-.grid-container {
-  position: relative;
-  width: 100%;
-}
+/*        .shadow:hover {
+             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-.grid-image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+        }
+*/
 
-.grid-overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #008CBA;
-}
+        .shadow {
+          transition: box-shadow .3s;
+  /*        width: 300px;
+          height: 500px;*/
+/*          margin: 50px;
+          border-radius:10px;*/
+        /*   border: 1px solid #ccc; */
+          background: #fff;
+          float: left;
 
-.grid-container:hover .grid-overlay {
-  opacity: 1;
-}
-
-.grid-text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
+        }
+        .shadow:hover {
+          box-shadow: 0 0 11px rgba(33,33,33,.2);
+        }
 
 
 
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 
 
-/* First image (Logo. Full height) */
-.bgimg-1 {
-    background-image: url('profile.jpg');
-    min-height: 40%;
-}
 
-/* Second image (Portfolio) */
-.bgimg-2 {
-    background-image: url("atlanta.jpg");
-    min-height: 400px;
-}
+        html, body
+        {
+            margin: 0px;
+        }
 
-/* Third image (Contact) */
-.bgimg-3 {
-    background-image: url("/assets/portfolio/photography.dng");
-    min-height: 400px;
-}
+        header, footer
+        {
+            font-family: Raleway;
+            margin: 0 auto;
+            padding: 5em 3em;
+            text-align: center;
+            background: #555;
+        }
 
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
+        header h1
+        {
+            color: #AAA;
+            font-size: 40px;
+            font-weight: lighter;
+            margin-bottom: 5px;
+        }
 
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
-    }
-}
+        header span
+        {
+            color: #222;
+        }
 
-/**extra margin**/
-.mar-left {
-   margin-left: 150px;
-}
+        footer span
+        {
+          color: #AAA;
+        }
 
-.mar-top-bottom {
-  margin-top: 20px;
-  margin-bottom: 20px;
+        div.container
+        {
+            font-family: Raleway;
+            margin: 0 auto;
+            padding: 10em 3em;
+            text-align: center;
+        }
 
-}
-
-/**extra wrapper class - padding**/
-.wrapper {
-  padding-right: 70px;
-  padding-left: 70px;
-}
-
-.title-wrapper {
-    padding-bottom: 40px;
-}
-
-
-/** 3 col system
-**/
-.column-left{ float: left; width: 33%; }
-.column-right{ float: right; width: 33%; }
-.column-center{ display: inline-block; width: 33%; }
+        div.container a
+        {
+            color: #FFF;
+            text-decoration: none;
+            font: 20px Raleway;
+            margin: 0px 10px;
+            padding: 10px 10px;
+            position: relative;
+            z-index: 0;
+            cursor: pointer;
+        }
 
 
-/**flexible col system**/
-.columns {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: 5px 0;
-}
 
-.column {
-  flex: 1;
-  margin: 2px;
-  padding: 20px;
-  &:first-child { margin-left: 0; }
-  &:last-child { margin-right: 0; }
-
-}
-
-@media screen and (max-width: 980px) {
-  .columns .column {
-    margin-bottom: 5px;
-    flex-basis: 40%;
-    &:nth-last-child(2) {
-      margin-right: 0;
-    }
-    &:last-child {
-      flex-basis: 100%;
-      margin: 0;
-    }
-  }
-}
-
-@media screen and (max-width: 680px) {
-  .columns .column {
-    flex-basis: 100%;
-    margin: 0 0 5px 0;
-  }
-}
-
-/**icon size**/
-.icon-size{
-    width: 24px !important;
-    height: 24px !important;
-}
+        .cyan
+        {
+            background: #00bcd4;
+        }
 
 
-/**dropdown**/
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
-.navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+        /* Top and Bottom borders go out */
+        div.topBotomBordersOut a:before, div.topBotomBordersOut a:after
+        {
+            position: absolute;
+            left: 0px;
+            width: 100%;
+            height: 2px;
+            background: #FFF;
+            content: "";
+            opacity: 0;
+            transition: all 0.3s;
+        }
 
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
+        div.topBotomBordersOut a:before
+        {
+            top: 0px;
+            transform: translateY(10px);
+        }
 
-.dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
+        div.topBotomBordersOut a:after
+        {
+            bottom: 0px;
+            transform: translateY(-10px);
+        }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
+        div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
+        {
+            opacity: 1;
+            transform: translateY(0px);
+        }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
+        /* Top and Bottom borders come in */
+        div.topBotomBordersIn a:before, div.topBotomBordersIn a:after
+        {
+            position: absolute;
+            left: 0px;
+            width: 100%;
+            height: 2px;
+            background: #FFF;
+            content: "";
+            opacity: 0;
+            transition: all 0.3s;
+        }
 
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
+        div.topBotomBordersIn a:before
+        {
+            top: 0px;
+            transform: translateY(-10px);
+        }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
+        div.topBotomBordersIn a:after
+        {
+            bottom: 0px;
+            transform: translateY(10px);
+        }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+        div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
+        {
+            opacity: 1;
+            transform: translateY(0px);
+        }
 
-</style>
+        /* Top border go down and Left border appears */
+        div.topLeftBorders a:before
+        {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 2px;
+            height: 0px;
+            background: #FFF;
+            content: "";
+            opacity: 1;
+            transition: all 0.3s;
+        }
+
+        div.topLeftBorders a:after
+        {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 2px;
+            background: #FFF;
+            content: "";
+            opacity: 1;
+            transition: all 0.3s;
+        }
+
+        div.topLeftBorders a:hover:before
+        {
+            height: 100%;
+        }
+
+        div.topLeftBorders a:hover:after
+        {
+            opacity: 0;
+            top: 100%;
+        }
+
+        /* Circle behind */
+        div.circleBehind a:before, div.circleBehind a:after
+        {
+            position: absolute;
+            top: 22px;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            border: 4px solid #0277bd;
+            transform: translateX(-50%) translateY(-50%) scale(0.8);
+            border-radius: 50%;
+            background: transparent;
+            content: "";
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: -1;
+        }
+
+        div.circleBehind a:after
+        {
+            border-width: 2px;
+            transition: all 0.4s;
+        }
+
+        div.circleBehind a:hover:before
+        {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-50%) scale(1);
+        }
+
+        div.circleBehind a:hover:after
+        {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-50%) scale(1.3);
+        }
+
+        /* Brackets go out */
+        div.brackets a:before, div.brackets a:after
+        {
+            position: absolute;
+            opacity: 0;
+            font-size: 35px;
+            top: 0px;
+            transition: all 0.3s;
+        }
+
+        div.brackets a:before
+        {
+            content: '(';
+            left: 0px;
+            transform: translateX(10px);
+        }
+
+        div.brackets a:after
+        {
+            content: ')';
+            right: 0px;
+            transform: translateX(-10px);
+        }
+
+        div.brackets a:hover:before, div.brackets a:hover:after
+        {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+
+        /* Border from Y to X  */
+        div.borderYtoX a:before, div.borderYtoX a:after
+        {
+            position: absolute;
+            opacity: 0.5;
+            height: 100%;
+            width: 2px;
+            content: '';
+            background: #FFF;
+            transition: all 0.3s;
+        }
+
+        div.borderYtoX a:before
+        {
+            left: 0px;
+            top: 0px;
+        }
+
+        div.borderYtoX a:after
+        {
+            right: 0px;
+            bottom: 0px;
+        }
+
+        div.borderYtoX a:hover:before, div.borderYtoX a:hover:after
+        {
+            opacity: 1;
+            height: 2px;
+            width: 100%;
+        }
+
+        /* Border X get width  */
+        div.borderXwidth a:before, div.borderXwidth a:after
+        {
+            position: absolute;
+            opacity: 0;
+            width: 0%;
+            height: 2px;
+            content: '';
+            background: #FFF;
+            transition: all 0.3s;
+        }
+
+        div.borderXwidth a:before
+        {
+            left: 0px;
+            top: 0px;
+        }
+
+        div.borderXwidth a:after
+        {
+            right: 0px;
+            bottom: 0px;
+        }
+
+        div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
+        {
+            opacity: 1;
+            width: 100%;
+        }
+
+        /* Pull down  */
+        div.pullDown a:before
+        {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0px;
+            top: 0px;
+            content: '';
+            background: #FFF;
+            opacity: 0.3;
+            transition: all 0.3s;
+        }
+
+        div.pullDown a:hover:before
+        {
+            height: 100%;
+        }
+
+        /* Pull up  */
+        div.pullUp a:before
+        {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0px;
+            bottom: 0px;
+            content: '';
+            background: #FFF;
+            opacity: 0.3;
+            transition: all 0.3s;
+        }
+
+        div.pullUp a:hover:before
+        {
+            height: 100%;
+        }
+
+        /* Pull right  */
+        div.pullRight a:before
+        {
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            content: '';
+            background: #FFF;
+            opacity: 0.3;
+            transition: all 0.3s;
+        }
+
+        div.pullRight a:hover:before
+        {
+            width: 100%;
+        }
+
+        /* Pull left  */
+        div.pullLeft a:before
+        {
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            right: 0px;
+            top: 0px;
+            content: '';
+            background: #FFF;
+            opacity: 0.3;
+            transition: all 0.3s;
+        }
+
+        div.pullLeft a:hover:before
+        {
+            width: 100%;
+        }
+
+        /* Pull up and down  */
+        div.pullUpDown a:before, div.pullUpDown a:after
+        {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0px;
+            content: '';
+            background: #FFF;
+            opacity: 0.3;
+            transition: all 0.3s;
+        }
+
+        div.pullUpDown a:before
+        {
+            top: 0px;
+        }
+
+        div.pullUpDown a:after
+        {
+            bottom: 0px;
+        }
+
+        div.pullUpDown a:hover:before, div.pullUpDown a:hover:after
+        {
+            height: 100%;
+        }
+
+        /* Pull right and left  */
+        div.pullRightLeft a:before, div.pullRightLeft a:after
+        {
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            top: 0px;
+            content: '';
+            background: #FFF;
+            opacity: 0.3;
+            transition: all 0.3s;
+        }
+
+        div.pullRightLeft a:before
+        {
+            left: 0px;
+        }
+
+        div.pullRightLeft a:after
+        {
+            right: 0px;
+        }
+
+        div.pullRightLeft a:hover:before, div.pullRightLeft a:hover:after
+        {
+            width: 100%;
+        }
+
+        /* Highlight text out  */
+        div.highlightTextOut a
+        {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        div.highlightTextOut a:before, div.highlightTextIn a:before
+        {
+            position: absolute;
+            color: #FFF;
+            top: 0px;
+            left: 0px;
+            padding: 10px;
+            overflow: hidden;
+            content: attr(alt);
+            transition: all 0.3s;
+            transform: scale(0.8);
+            opacity: 0;
+        }
+
+        div.highlightTextOut a:hover:before, div.highlightTextIn a:hover:before
+        {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        /* Highlight text in  */
+        div.highlightTextIn a
+        {
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        div.highlightTextIn a:before
+        {
+            transform: scale(1.2);
+        }
+
+
+
+    </style>
+
+</head>
 <body>
+    <header>
+            <nav class = "navbar navbar-default">
+            <!-- Default container to pad everything within right size -->
+                <div class="container">
+                    <!-- Brand Image / Logo -->
+                    <div class="navbar-header">
+                           <!-- Takes us pack to home (href = "#") -->
+                           <!-- Hamburger menu for navbar items when collapse: Responsive -->
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                          </button>
+                            <a href="#" class="navbar-brand"><img src="/assets/initialLogo.png"></a>
+                    </div>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button w3-hover-red">YE-JI KIM</a>
-    <!--dropdown-->
-    <div class="dropdown">
-        <a class="w3-bar-item w3-button w3-hide-small">PROJECTS</a>
-        <div class="dropdown-content">
-          <a href="shelterBuzz.html">ShelterBuzz</a>
-          <a href="bigSister.html">BigSister</a>
-          <a href="treeAtlanta.html">Trees Atlanta</a>
-          <a href="infographic.html">College Torrenting Infographic</a>
-          <a href="olympicPoster.html">Olympic Poster</a>
-          <a href="Photography.html">Photography</a>
-          <a href="logoDesign.html">Initals Logo Design</a>
-          <a href="sketchrain.html">sketch_rain</a>
-          <a href="rooftop.html">rooftop</a>
+                    <ul class ="nav navbar-nav">
+                        <!-- Projects -->
+                        <li><a href = "content.html">Projects</a></li>
+                        <!-- About Me -->
+                        <li><a href ="#">Blog</a></li>
+                    </ul>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class ="nav navbar-nav navbar-right">
+                            <!-- Resume -->
+                            <li><a href ="aboutme.html">About Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            <div class="jumbotron">
+             <div>
+                    <h3>Hi, my name is Ye-Ji Kim and</h3>
+                    <h3>I want to be a UX/UI Designer.</h3>
+                </div>
+            </div>
+
+
+
+        </nav>
+
+        <!-- animated navbar -->
+        <div class="container cyan brackets">
+          <a>HOME</a>
+          <a>ARTICLES</a>
+          <a>PORTFOLIO</a>
+          <a>ABOUT</a>
+          <a>CONTACT</a>
+        </div>
+
+
+
+    </header>
+
+    <!-- Banner -->
+
+<!--     <div class="jumbotron">
+
+        <div>
+            <h2>Hi, my name is Ye-Ji Kim and I am (yet to be) a UX/UI Designer.</h2>
         </div>
     </div>
-
-
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-<!--     <a href="projects.html" class="w3-bar-item w3-button w3-hide-small"> PROJECTS</a> -->
-
-
-  </div>
-</div>
-
-<!-- First Parallax Image with Logo Text -->
-
-
-
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-
-  <div class="w3-row">
-
-    <div class="w3-col m6">
-      <h3>ABOUT ME</h3>
-
-      <p><em><i>Designer, Programmer<br>Computational Media,  Georgia Institue of Technology 2020</i></em></p>
-
-      <!-- Hide this text on small devices -->
-
-        <p>Hello, my name is Ye-Ji Kim and I am a university student <br> studying Computational Media at Georgia Tech. <br> As a student, I spend my time learning what I love,
-        meeting <br> great people, and trying to be better than yesterday. <br>
-          I wish to one day to create something inspirational <br> that would overcome all differences we have.</p>
-
-    </div>
-
-    <div class="w3-col m6 circular w3-center">
-   <!--     <img class="w3-center" src="assets/indexgrid/shelterBuzz.png" alt="name logo" width="300" height="300"> -->
-         <img src="assets/profile.jpg" class="w3-round w3-image" alt="profile pic" pad="Photo of Me" width="300" height="200">
-
-    </div>
-
-</div>
-
-
-
-
-
-  <!--javascript-->
-<!--   <button onClick = "revealMessage()">Click me</button>
-  <div id = "hiddenMessage" style = "display:none"> -->
-    <!--putting inside div makes all of them hidden-->
-<!--     <p id ="headline"> Surprise!</p>
-    <p id ="concatenate"></p>
-    <button id = "countDownButton" onClick ="countDown()">10</button>
-
-    <button id ="add-Item" onClick="addItem()">Add Item</button>
-
-
-      <ul id ="our-list">
-        <li>First</li>
-        <li>Second</li>
-        <li>Third</li>
-      </ul>
-  </div> -->
-
-
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center mar-top-bottom">RECENT WORK</h3>
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <!--Hover text effect: Title, Subtitle-->
-  <div class="w3-row-padding w3-center col4-img">
-
-    <div class="w3-col m3">
-        <div class = "grid-container">
-          <!--press image and go to project page-->
-            <a href = "shelterBuzz.html">
-              <img src="assets/indexgrid/shelterBuzz.png" style="width:100%" alt="shelterBuzz cover" class="grid-image w3-opacity w3-hover-opacity-off"">
-            </a>
-         </div>
-    </div>
-
-    <div class="w3-col m3">
-          <div class = "grid-container">
-            <a href = "bigSister.html">
-              <img src="assets/indexgrid/bigSistercover.png" style="width:100%" class="grid-image w3-opacity w3-hover-opacity-off" alt="bigSister cover">
-            </a>
-         </div>
-    </div>
-
-
-    <div class="w3-col m3">
-        <div class = "grid-container">
-            <a href = "treeAtlanta.html">
-              <img src="assets/indexgrid/branding_cover.jpg" style="width:100%" class="grid-image w3-opacity w3-hover-opacity-off" alt="branding cover">
-            </a>
-         </div>
-    </div>
-
-
-<!--     <div class="w3-col m3">
-        <div class = "grid-container">
-          <a href="infographic.html">
-              <img src="assets/indexgrid/infographic_cover.jpeg" style="width:100%" class="grid-image w3-opacity w3-hover-opacity-off" alt="infographic cover">
-          </a>
-         </div>
-    </div> -->
-
-
-
-    <!--row2: portfolio (visual design, photo, illustration)-->
-    <div class="w3-col m3 mar-top-bottom">
-        <div class = "grid-container">
-            <a href="rooftop.html">
-              <img src="assets/indexgrid/rooftop_cover.png" style="width:100%" class="grid-image w3-opacity w3-hover-opacity-off" alt="rooftop cover">
-         </div>
-
-    </div>
-
-    <div class="w3-col m3 mar-top-bottom">
-        <div class = "grid-container">
-            <a href="olympicPoster.html">
-              <img src="assets/indexgrid/olympicposter_cover.jpg" style="width:100%" class="grid-image w3-opacity w3-hover-opacity-off" alt="olympic poster cover">
-            </a>
-         </div>
-    </div>
-
-<!--     <div class="w3-col m3 mar-top-bottom">
-        <div class = "grid-container">
-            <a href="photography.html">
-              <img src="assets/indexgrid/photo.jpg" style="width:100%" class="grid-image w3-opacity w3-hover-opacity-off" alt="photo cover">
-            </a>
-         </div>
-    </div>
-
-    <div class="w3-col m3 mar-top-bottom">
-        <div class = "grid-container">
-          <a href="logoDesign.html">
-            <img src="assets/indexgrid/logo_cover.png" style="width:100%" class="grid-image w3-opacity w3-hover-opacity-off" alt="logo cover">
-          </a>
-         </div>
-    </div>
-
-
-    <div class="w3-col m3 mar-top-bottom">
-        <div class = "grid-container">
-          <a href="sketchrain.html">
-            <img src="assets/indexgrid/sketchrain_cover.png" style="width:100%" class="grid-image w3-opacity w3-hover-opacity-off" alt="rooftop cover">
-          </a>
-        </div>
-    </div> -->
-
-  </div>
-
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-
-
-
-
-<!-- <div class="w3-row-padding w3-center w3-content w3-container w3-padding-64">
-    <h3 class="w3-center title-wrapper">SKILLS</h3>
-    <div class="w3-col m3">
-        <i class="fa fa-code-fork w3-hover-opacity w3-hide-small"></i>
-        <h4>Programming</h4>
-        <p>Java<br>Python<br>C<br>HTML<br>CSS<br>JavaScript</p>
-    </div>
-    <div class="w3-col m3">
-        <i class="fa fa-laptop w3-hover-opacity icon-size w3-hide-small"></i>
-        <h4>Software and Programs</h4>
-        <p>JUnit<br>Git<br>Adobe Photoshop<br>Adobe InDesign<br></p>
-    </div>
-    <div class="w3-col m3">
-        <i class="fa fa-pie-chart w3-hover-opacity w3-hide-small"></i>
-        <h4>General Skills</h4>
-        <p>Prototyping<br>2-D Design<br>Photography</p>
-    </div>
-    <div class="w3-col m3">
-        <i class="fa fa-language w3-hover-opacity w3-hide-small"></i>
-        <h4>Language</h4>
-        <p>English (Fluent)<br>Korean (Native)<br>Spanish (Elementary)</p>
-    </div>
-</div> -->
-
-
-
-
-
-
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center title-wrapper">CONTACT</h3>
-
-  <div class="w3-row">
-<!--     <div class="w3-col m4 w3-container">
-      <div class="w3-round-large w3-greyscale bgimg-2" style="width:100%;height:400px;"></div>
-    </div> -->
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right" style="padding-bottom: 20px"></i> Atlanta, GA<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right" style="padding-bottom: 20px"></i>706-616-2722<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right" style="padding-bottom: 20px"></i>ykim0113@gmail.com<br>
-      </div>
-    </div>
-
-    <div class="w3-col m6 w3-center w3-padding-large w3-hide-small">
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-          </div>
-        </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> PING ME
-        </button>
-      </form>
-    </div>
-
-  </div>
-</div>
-
-
-
-
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-32 w3-opacity">
-    <button class ="w3-button w3-padding-large w3-light-grey w3-hover-red" type="submit" onclick="window.open('YejiKimResume.pdf')">Download Resume</button>
-  <div class="w3-xlarge w3-section">
-<!--     <i class="fa fa-facebook-official w3-hover-opacity"></i> -->
-    <a href="https://www.linkedin.com/in/ye-ji-kim-7a5733157/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-    <a href="https://github.com/ykim0113"><i class="fa fa-github w3-hover-opacity"></i></a>
-  </div>
-</footer>
-
-<!--Google Map-->
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
  -->
+
+
+
+    <!-- Bootstrap 3 uses 12 units + gutters between
+    Grid created:
+
+        container
+            row //12 units for a row
+                <col> //item </col>
+
+    EX) 4 col photo grid? 4 col occupy 3 column space each (4*3) with gutter
+     -->
+
+    <!-- Grid System of photos -->
+    <div class="container">
+
+        <!-- 2 col that 2 col for medium screen, 2 col for small, 1 for xsmall -->
+        <!-- Can get rid of lg (or the larger breakpoint) > Bootstrap will know
+        the same restriction continues from large -> medium -->
+        <div class ="row">
+            <div class ="col-md-6 col-sm-12 col-xs-12">
+
+                <!-- thumbnail img -->
+                <div class="thumbnail shadow">
+                    <img src="assets/shelterBuzzCover.png">
+                </div>
+
+ <!--                <h3>ShelterBuzz</h3>
+                <p>Android Development, UI / UX Design</p> -->
+            </div>
+            <div class = "col-md-6 col-sm-12 col-xs-12">
+
+                <!-- thumbnail img -->
+                <div class="thumbnail shadow">
+                    <img src="assets/treeAtlantaCover.png">
+
+                </div>
+
+<!--                 <h3>Trees Atlanta</h3>
+                <p>Branding Project</p> -->
+            </div>
+
+<!--             <div class ="col-md-6 col-sm-12 col-xs-12">
+                <div class="thumbnail">
+                    <img src="http://i.imgur.com/qK42fUu.jpg">
+
+                </div>
+
+            </div> -->
+
+            <div class ="col-md-6 col-sm-12 col-xs-12">
+            <!-- col takes 6 / 12 units -->
+
+                 <!-- thumbnail img -->
+                <div class="thumbnail shadow">
+                    <img src="assets/loadingCover.png">
+
+                </div>
+     <!--
+                <h3>Todo List App</h3>
+                <p>Coming Soon</p> -->
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="container">
+        <div class="row">
+          <div class = "col-md-8 col-sm-12 col-xs-12">
+              <h5>HELLO THERE,</h5>
+              <p>I am a rising Junior studying Compuational Media at Georgia Tech. A visual thinker and problem solver, I love questioning <i>"WHY"</i> and going through
+              the process of finding the answer.</p>
+              <p>Currently I am working on a todo list app, learning about UX Design, and Flutter.</p>
+          </div>
+          <div class = "col-md-4 col-sm-12 col-xs-12">
+              <h5>TOOLS</h5>
+              <p>Sketch</p>
+              <p>InVision</p>
+              <p>Android Studio</p>
+              <p>Photoshop / Illustrator / InDesign</p>
+              <p>HTML/CSS</p>
+          </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!--
+        Medium
+        BeHance
+        InVision
+
+     -->
+
+
+
 
 </body>
 </html>
-
-
-
