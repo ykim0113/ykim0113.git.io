@@ -3,20 +3,25 @@
 <head>
     <title>Main Page</title>
 
+    <!-- Bootstrap 3 -->
+
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
 
-    <!-- Bootstrap 4 -->
-<!--     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
- -->
-    <!-- Referring to downloaded Bootstrap JS file -->
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
 
-    <!-- Required jQuery file -->
     <script   src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
 
-    <!-- Cutsom style -->
-    <style type="text/css">
 
+    <!-- Bootstrap 4 -->
+<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+
+    <style type=text/css>
 
         h2 {
             text-align: center;
@@ -24,6 +29,10 @@
 
         h3 {
             text-align: center;
+        }
+
+        h5 {
+            font-size: 17px;
         }
 
         .bg {
@@ -59,11 +68,7 @@
         }
 
         .navbar-bg {
-
-
-            background: linear-gradient(255deg, #f5b776, #f5e576);
-            /*yellow: Wallpaper background 1920x1080 linear yellow gradient orange #f5b776 #f5e576 255°*/
-            /*yellow-coral: Wallpaper background 2560x1600 linear yellow gradient red gold light coral #ffd700 #f08080 60°*/
+            background-color: #FFE076;
         }
 
         .content-container {
@@ -206,7 +211,6 @@
 
         .title{
           font-size: 1.4rem;
-          text-transform: uppercase;
           margin: 0;
           background-color: #fff;
           padding: .5rem 1.5rem;
@@ -234,10 +238,16 @@
 
         .menu__link{
           font-size: 1.8rem;
-          font-weight: 700;
+          font-weight: 200;
           color: #fff;
           text-decoration: none;
-          text-transform: uppercase;
+        }
+
+        .menu__link_title {
+          font-size: 2.0rem;
+          font-weight: 900;
+          color: #fff;
+          text-decoration: none;
         }
 
         @media screen and (min-width: 1201px){
@@ -259,9 +269,60 @@
           }
         }
 
+        .jumbotron h1 {
+            font-size: 36px;
+            font-family: 'Apple SD Gothic Neo';
+        }
 
+      .jumbotron p {
+            font-family: 'Roboto';
+       }
 
+       /*Fab button*/
+       .fab {
+           width: 70px;
+           height: 70px;
+           background-color: #6482E8;
+           border-radius: 50%;
+           box-shadow: 0 6px 10px 0 #666;
+           transition: all 0.1s ease-in-out;
 
+           font-size: 50px;
+           color: white;
+           text-align: center;
+           line-height: 70px;
+
+           position: fixed;
+           right: 50px;
+           bottom: 50px;
+        }
+
+        .fab:hover {
+           box-shadow: 0 6px 14px 0 #666;
+           transform: scale(1.05);
+        }
+
+        .main_subtitle {
+            text-align: center;
+        }
+
+        .main_subtitle h3{
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .container_title {
+            padding-left: 160px;
+            padding-top: 50px;
+        }
+
+       /*main card image*/
+       .main_card {
+         background-color: white;
+         padding-right: 0px;
+         padding-left: 0px;
+         margin-bottom: 50px;
+       }
 
 
 
@@ -283,28 +344,13 @@
                     </div>
 
 
-
-<!--                     <section class="section">
-                        <ul class="menu">
-                          <li class="menu__item">
-                            <a href="#0" class="menu__link hover3"><span class="menu__label hover3__label">Home</span></a>
-                          </li>
-                          <li class="menu__item">
-                            <a href="#0" class="menu__link hover3"><span class="menu__label hover3__label">About</span></a>
-                          </li>
-                          <li class="menu__item">
-                            <a href="#0" class="menu__link hover3"><span class="menu__label hover3__label">Contacts</span></a>
-                          </li>
-                        </ul>
-                  </section> -->
-
                     <ul class ="menu nav navbar-nav">
-                        <li class="menu_item"><a class="menu__link hover3" href = "#"><span class="menu__label hover3__label">Home</span></a></li>
-                        <li class="menu_item"><a class="menu__link hover3" href = "content.html"><span class="menu__label hover3__label">Projects</span></a></li>
+                        <li class="menu_item"><a class="menu__link_title hover3" href = "#"><span class="menu__label hover3__label">yeji kim</span></a></li>
                     </ul>
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class ="nav navbar-nav navbar-right">
+                           <li class="menu_item"><a class="menu__link hover3" href = "content.html"><span class="menu__label hover3__label">Portfolio</span></a></li>
                            <li class="menu_item"><a class="menu__link hover3" href = "aboutme.html"><span class="menu__label hover3__label">About Me</span></a></li>
                         </ul>
                     </div>
@@ -312,8 +358,16 @@
 
             <div class="jumbotron">
              <div>
-                    <h2>Hi, my name is Ye-Ji Kim and</h2>
-                    <h2>I want to be a UX/UI Designer.</h2>
+                    <!-- Apple SD Gothic Neo / Semibold -->
+                    <div class="container">
+                        <h1>Hi, my name is Ye-Ji Kim</h1>
+                        <h1>and I want to be a UX/UI Designer.</h1>
+                    </div>
+
+                    <!-- roboto / light-->
+                    <div class="container container_title">
+                        <p>I am a <b>visual thinker</b> and (aspiring to-be) <b>ux designer</b> who has passion for human-centered design, visual <br>design, and resolving problems. </p>
+                    <div class="container">
                 </div>
             </div>
 
@@ -321,13 +375,7 @@
 
         </nav>
 
-        <!-- animated navbar -->
-<!--         <div class="container cyan brackets">
-          <a>HOME</a>
-          <a>PORTFOLIO</a>
-          <a>ABOUT ME</a>
-        </div>
- -->
+
 
 
     </header>
@@ -357,30 +405,53 @@
     <!-- Grid System of photos -->
     <div class="container content-container">
 
+        <!-- Download button -->
+        <div class="fab">
+        </div>
+
         <!-- 2 col that 2 col for medium screen, 2 col for small, 1 for xsmall -->
         <!-- Can get rid of lg (or the larger breakpoint) > Bootstrap will know
         the same restriction continues from large -> medium -->
         <div class ="row">
-            <div class ="col-md-6 col-sm-12 col-xs-12">
+            <div class ="col-md-6 col-sm-12 col-xs-12 main_card shadow">
 
                 <!-- thumbnail img -->
-                <div class="thumbnail shadow">
+                <div class="thumbnail">
                     <img src="assets/shelterBuzzCover.png">
                 </div>
 
- <!--                <h3>ShelterBuzz</h3>
-                <p>Android Development, UI / UX Design</p> -->
+                <div class="main_subtitle">
+                    <h3>ShelterBuzz</h3>
+                    <p><i>UI/UX, Frontend for Android</i></p>
+                </div>
             </div>
-            <div class = "col-md-6 col-sm-12 col-xs-12">
+
+            <div class = "col-md-6 col-sm-12 col-xs-12 main_card shadow">
 
                 <!-- thumbnail img -->
-                <div class="thumbnail shadow">
+                <div class="thumbnail">
                     <img src="assets/treeAtlantaCover.png">
 
                 </div>
 
-<!--                 <h3>Trees Atlanta</h3>
-                <p>Branding Project</p> -->
+                <div class="main_subtitle">
+                    <h3>Trees Atlanta</h3>
+                    <p><i>Branding, Visual Design</i></p>
+                </div>
+            </div>
+
+            <div class = "col-md-6 col-sm-12 col-xs-12 main_card shadow">
+
+                <!-- thumbnail img -->
+                <div class="thumbnail">
+                    <img src="assets/treeAtlantaCover.png">
+
+                </div>
+
+                <div class="main_subtitle">
+                    <h3>Trees Atlanta</h3>
+                    <p><i>Branding, Visual Design</i></p>
+                </div>
             </div>
 
 <!--             <div class ="col-md-6 col-sm-12 col-xs-12">
@@ -391,18 +462,6 @@
 
             </div> -->
 
-            <div class ="col-md-6 col-sm-12 col-xs-12">
-            <!-- col takes 6 / 12 units -->
-
-                 <!-- thumbnail img -->
-                <div class="thumbnail shadow">
-                    <img src="assets/loadingCover.png">
-
-                </div>
-     <!--
-                <h3>Todo List App</h3>
-                <p>Coming Soon</p> -->
-            </div>
         </div>
 
 
@@ -410,16 +469,16 @@
 
 
 
-    <div class="container">
+<!--     <div class="container">
         <div class="row">
           <div class = "col-md-8 col-sm-12 col-xs-12">
-              <h5>HELLO THERE,</h5>
-              <p>I am a rising Junior studying Compuational Media at Georgia Tech. A visual thinker and problem solver, I love questioning <i>"WHY"</i> and going through
-              the process of finding the answer.</p>
-              <p>Currently I am working on a todo list app, learning about UX Design, and Flutter.</p>
+              <h5><b>HELLO THERE,</b></h5>
+              <p>I am a rising Junior studying Compuational Media at Georgia Tech. A visual thinker and <br>problem solver, I love questioning <i>"WHY"</i> and going through
+              the journey of finding the answer.</p>
+              <p>Currently I am designing a todo list app, learning about UX Design, and trying out building <br>apps in Flutter.</p>
           </div>
           <div class = "col-md-4 col-sm-12 col-xs-12">
-              <h5>TOOLS</h5>
+              <h5><b>TOOLS</b></h5>
               <p>Sketch</p>
               <p>InVision</p>
               <p>Android Studio</p>
@@ -428,7 +487,7 @@
           </div>
 
         </div>
-    </div>
+    </div> -->
 
     <!-- Footer -->
     <!--
