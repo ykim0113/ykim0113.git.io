@@ -5018,6 +5018,7 @@ a.badge:focus {
 .thumbnail a > img {
   margin-right: auto;
   margin-left: auto;
+  padding-top: 15px;
 }
 a.thumbnail:hover,
 a.thumbnail:focus,

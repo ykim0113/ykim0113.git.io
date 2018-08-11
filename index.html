@@ -311,12 +311,31 @@
         }
 
         .main_subtitle {
-            text-align: center;
+            text-align: left;
+            padding-left: 40px;
         }
 
         .main_subtitle h3{
-            text-align: center;
-            margin-bottom: 5px;
+            text-align: left;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 33.0px;
+            margin-bottom: 10px;
+        }
+
+        .main_subtitle h4 {
+            font-weight: 300;
+            font-style: italic;
+            font-size: 17.0px;
+            padding-bottom: 0px;
+        /*    margin: 0;*/
+        }
+
+
+        .main_subtitle p {
+            font-weight: 300;
+            font-style: normal;
+            font-size: 16.0px;
         }
 
         .container_title {
@@ -327,6 +346,7 @@
        /*main card image*/
        .main_card {
          background-color: white;
+         width: wrap-content;
          padding-right: 0px;
          padding-left: 0px;
          margin-bottom: 50px;
@@ -424,17 +444,17 @@
         <!-- Can get rid of lg (or the larger breakpoint) > Bootstrap will know
         the same restriction continues from large -> medium -->
         <div class ="row">
-            <div class ="col-md-6 col-sm-12 col-xs-12 main_card shadow">
+            <div class ="col-md-12 col-sm-12 col-xs-12 main_card shadow">
 
                 <!-- thumbnail img -->
-                <div class="thumbnail">
+                <div class="col-md-8 col-sm-12 col-xs-12 thumbnail">
                     <img src="assets/shelterBuzzCover.png">
                 </div>
 
-                <div class="main_subtitle">
+                <div class="col-md-4 col-sm-12 col-xs-12 main_subtitle">
                     <h3>Hoy</h3>
-                    <p><i>Product Design</i></p>
-                    <p><i>UI/UX Design</i></p>
+                    <h4><i>Product Design</i></h4>
+                    <h4><i>UI/UX Design</i></h4>
                     <p>Flutter todo app that helps users stay productive
                     with long-term goals</p>
 
@@ -443,20 +463,20 @@
                 </div>
             </div>
 
-            <div class = "col-md-6 col-sm-12 col-xs-12 main_card shadow">
+            <div class = "col-md-12 col-sm-12 col-xs-12 main_card shadow">
 
                 <!-- thumbnail img -->
-                <div class="thumbnail">
+                <div class="col-md-8 col-sm-12 col-xs-12 thumbnail">
                     <img src="assets/treeAtlantaCover.png">
 
                 </div>
 
-                <div class="main_subtitle">
-                    <h3>Trees Atlanta</h3>
+                <div class="col-md-4 col-sm-12 col-xs-12 main_subtitle">
+                    <h3 style="padding-bottom: 5px">Trees Atlanta</h3>
                     <p><i>Product Design</i></p>
                     <p><i>Branding</i></p>
                     <p>Re-defining brand identity and logo for non-profit
-                    organization Trees Atlanta</p>
+                    organization <u>Trees Atlanta</u></p>
                     <!-- anchor, underlined -->
 
                     <!-- Button : "DESIGN PROCESS" -->
