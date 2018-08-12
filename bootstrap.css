@@ -1585,14 +1585,14 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: 140px;
-  padding-left: 140px;
+  padding-right: 100px;
+  padding-left: 100px;
   margin-right: auto;
   margin-left: auto;
 }
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 800px;
   }
 }
 @media (min-width: 992px) {
@@ -1630,8 +1630,8 @@ pre code {
 }
 
 .col-xs-12 img {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .col-xs-11 {
@@ -3642,7 +3642,7 @@ tbody.collapse.in {
   bottom: 100%;
   margin-bottom: 2px;
 }
-@media (min-width: 768px) {
+@media (min-width: 780px) {
   .navbar-right .dropdown-menu {
     right: 0;
     left: auto;
@@ -5003,8 +5003,8 @@ a.badge:focus {
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
   .jumbotron h1,
   .jumbotron .h1 {
