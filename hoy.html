@@ -17,6 +17,9 @@
 
 
     <style type=text/css>
+      .container {
+        max-width: 1000px;
+      }
 
         p {
             font-size: 15px;
@@ -41,13 +44,21 @@
 
         h2 {
             font-family: 'IBM Plex Serif';
-            font-size: 25px;
+            font-size: 27px;
             line-height: 1.5em;
+            font-weight: bold;
         }
 
         h3 {
             text-align: center;
         }
+
+      /*  h3 {
+            color:#CDCDCD;
+        }
+        .highlight {
+            background-color: #FFFF00;
+        }*/
 
         h4 {
           font-family: 'IBM Plex Sans';
@@ -97,9 +108,6 @@
             border-bottom: 0.5px solid gray;
         }
 
-        .content-container {
-            padding-top: 100px;
-        }
 
         .navbar-nav li {
             font-size: 18px;
@@ -393,14 +401,6 @@
             color: #6482E8;
         }
 
-
-        h3 {
-            color:#CDCDCD;
-        }
-        .highlight {
-            background-color: #FFFF00;
-        }
-
         .banner-container {
             width:100%;
             height:100%;
@@ -507,22 +507,31 @@
 </head>
 <body>
     <header>
-       <nav class = "navbar navbar-default navbar-bg">
+         <nav class = "navbar navbar-default navbar-bg">
 
-                    <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class=ar"icon-bar"></span>
-                          </button>
+                <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class=ar"icon-bar"></span>
+                      </button>
 
-                    </div>
+                </div>
 
 
-                    <ul class ="menu nav navbar-nav">
-                        <li class="menu_item"><a class="menu__link_title hover3" href = "file:///Users/YEJIKIM/Desktop/yjk/job/profileWeb.io/ykim0113.github.io/index.html"><span class="menu__label hover3__label">back</span></a></li>
+                <ul class ="nav navbar-nav">
+                    <li><a href = "index.html"><span class="menu__label hover3__label" style="font-family: 'IBM Plex Sans'; color: #0D19E4; font-weight: bold;">yeji kim</span></a></li>
+                </ul>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class ="nav navbar-nav navbar-right">
+                       <li><a href = "content.html"><span style = "font-family: 'IBM Plex Mono'; font-size: 0.8em;">Projects</span></a></li>
+                       <li><a href = "about.html"><span style = "font-family: 'IBM Plex Mono'; font-size: 0.8em;">About</span></a></li>
+                       <li><a href = "Yeji_Kim_Resume_Design_Research.pdf"><span style = "font-family: 'IBM Plex Mono'; font-size: 0.8em;">Resume</span></a></li>
                     </ul>
+                </div>
+
 
 
         </nav>
@@ -560,26 +569,21 @@
         </div>
     </div>
 
-    <div class="container pain_container" style="padding-top: 50px; padding-bottom: 50px;padding-left: 240px;">
-        <h4>PAIN POINT</h4>
-        <!-- img
-        <img src="..." class="img-responsive" alt="Responsive image">
-        -->
-        <h1 style="margin-top: 50px; margin-bottom: 50px;">"How do we keep track of long-term goals?"</h1>
+<!-- Problem & solution section -->
+<!--     <div class="container pain_container">
+        <h4>Problem</h4>
+        <h2 style="margin-top: 50px; margin-bottom: 50px;">"How do we keep track of long-term goals?"</h2>
         <p>It started out as my classmate sharing his problem of having a hard time keeping up with various tasks during the semester. He brought up how he faced difficutly especially keeping track of long-term goals, and wished to find a easier way to manage his tasks.</p>
     </div>
 
 
     <div class="container" style="height: 100%;padding-top: 100px; padding-bottom: 100px">
         <h4 style="color:#0700E1;">SOLUTION</h4>
-        <!-- img
-        <img src="..." class="img-responsive" alt="Responsive image">
-        -->
         <p>Thus we attempted to resolve the problem by designing and creating a customized to-do app.<p>
         <p>Designed for both iOS and Android, <b>Hoy</b> is a to-do list app that manages the tasks for the users so they can <b>easily track their long-term goals</b>, <b>stay on schedule for repetitive tasks</b>, and <b>prioritize their tasks for the day</b> to increase the user's productivity.</p>
 
 
-    </div>
+    </div> -->
 
 
    <!--  <div class="container" style="padding-bottom: 50px;">
@@ -592,40 +596,29 @@
 
 
     <div class="container">
-        <h4>RESEARCH</h4>
-        <!-- img
-        <img src="..." class="img-responsive" alt="Responsive image">
-         -->
-        <h5>> User Interview <span style= "font-weight: 200; font-size: 14px;"><i><a href ="https://docs.google.com/forms/d/1UKSdf4tYOyLcniQeTfkgyileUEjvbH1pzpkXk36bQGk/prefill"> - Survey questions</a></i></span></h5>
-
-        <p>To understand the user's pain points and gather his or her requests, I decided to interview our perspective user, my classmate.</p>
-        <p>The crucial point in the interview was to <b>understand what a long-term task meant to him</b> and his problems regarding it. Thus the questions aimed to cover the following points:</p>
+        <h2>User Research</h2>
+        <p>I spent a week researching about potential users of the app. Although the primary user of the app was my friend (Computer Science major at Georgia Tech), I wanted to broaden our users to students at Georgia Tech as 67.5% of students uses productivity apps. My research encompassed:</p>
         <ul>
-            <li>Difference between a long-term and a short-term goal (Duration, Timeline, Frequency)</li>
-            <li>Reasons to use a to-do list (Work, Personal Life, Both)</li>
-            <li>How a to-do list would help him (Productivity, Organization, Motivation)</li>
-            <li>Familiarity with using to-do list (Digital or Analog)</li>
+          <li><p>Survey</p></li>
+          <li><p>Market Research</p></li>
         </ul>
-
-
-        <div class="thumbnail">
-          <!-- cover img of survey  -->
-        </div>
-
-        <p style="padding-top: 40px;"> Then based on the interview results, I categorized the interviewees answers. This process helped me proritize his wants and needs, which would be reflected as main features for the app.</p>
-
-
-        <div class="thumbnail">
-          <!-- img of categorization -->
-        </div>
-
-
     </div>
 
+    <div class="container">
+        <h2>Survey</h2>
+        <p>I asked my teammate and couple more friends about their experiences of using a productivity app or planner through a Google Form to collect qualitative data. Some questions I asked were:</p>
+        <ul>
+          <li><p>Past experience using productivity apps</p></li>
+          <li><p>How user would define long-term and short-term goal (duration vs frequency)</p></li>
+          <li><p>How users manage their tasks (prioritizing, categorizing, number of lists)</p></li>
+        </ul>
+    </div>
 
-<!--     <div class="container">
-        <h4>JOURNEY</h4>
-    </div> -->
+     <div class="container">
+        <h2>Market Research</h2>
+        <p>I conducted a market research on existing productivity and time management apps. From this research I was able to determine that our app would be a combination of project management and productivity apps.</p>
+        <div class="thumbnail" style="height: 100%;"><img src="assets/about_profile.jpg"></div>
+    </div>
 
     <div class="container">
         <h4>IDEATION</h4>
