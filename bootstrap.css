@@ -6778,4 +6778,14 @@ button.close {
     display: none !important;
   }
 }
+
+/*Flexbox*/
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.thumbnail {
+  height: 100%;
+}
+
 /*# sourceMappingURL=bootstrap.css.map */
