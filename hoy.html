@@ -4,6 +4,8 @@
     <title>Hoy</title>
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
 
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans|IBM+Plex+Serif&display=swap" rel="stylesheet">
+
     <!-- Bootstrap 4 -->
 <!--     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> -->
 
@@ -17,16 +19,41 @@
     <style type=text/css>
 
         p {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 300;
+            font-family: 'IBM Plex Sans';
+            line-height: 2em;
+        }
+
+        .duration p {
+            font-size: 20px;
+            font-weight: 300;
+            font-family: 'IBM Plex Serif';
+            line-height: 2em;
+        }
+
+        h1 {
+           font-size: 60px;
+            font-weight: bold;
+            font-family: 'IBM Plex Serif';
+            line-height: 1.7em;
         }
 
         h2 {
-            text-align: center;
+            font-family: 'IBM Plex Serif';
+            font-size: 25px;
+            line-height: 1.5em;
         }
 
         h3 {
             text-align: center;
+        }
+
+        h4 {
+          font-family: 'IBM Plex Sans';
+          font-size: 17px;
+          font-weight: bold;
+          line-height: 1.7em;
         }
 
         h5 {
@@ -367,10 +394,6 @@
         }
 
 
-
-
-
-
         h3 {
             color:#CDCDCD;
         }
@@ -393,29 +416,11 @@
             padding-left: 200px;
         }
 
-        .project_title h1 {
-            font-weight: 600;
-            font-size: 50px;
-        }
-
-        .info_title h4 {
-            color: #827A7A;
-            font-size: 16px;
-
-        }
-
-        .info_title p {
-            font-size: 14px;
-            font-weight: 400;
-        }
-
         li {
             font-size: 16px;
         }
 
-        h4 {
 
-        }
 
 
         /* Style the Image Used to Trigger the Modal */
@@ -503,7 +508,7 @@
 <body>
     <header>
        <nav class = "navbar navbar-default navbar-bg">
-                <div class="container">
+
                     <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
@@ -516,10 +521,10 @@
 
 
                     <ul class ="menu nav navbar-nav">
-                        <li class="menu_item" style="color:white;"><a class="menu__link_title hover3" href = "file:///Users/YEJIKIM/Desktop/yjk/job/profileWeb.io/ykim0113.github.io/index.html"><span class="menu__label hover3__label">back</span></a></li>
+                        <li class="menu_item"><a class="menu__link_title hover3" href = "file:///Users/YEJIKIM/Desktop/yjk/job/profileWeb.io/ykim0113.github.io/index.html"><span class="menu__label hover3__label">back</span></a></li>
                     </ul>
 
-                </div>
+
         </nav>
 
     </header>
@@ -539,24 +544,18 @@
         <p style="font-size: 14px; font-weight: 500;">Focus on today to accomplish long-term goals.</p>
     </div>
 
-    <div class="container info_title" style="padding-bottom: 50px; padding-left: 210px;">
+    <div class="container">
         <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <h4>DURATION</h4>
-                <p>06 - 08/2018</p>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <h4>Overview</h4>
+                <p>During my sophomore year summer break, I came across my friend’s problem which I emphasized a lot with as a fellow college student. He was worried about becoming a Junior and having to balance hard classes with work and social life. He has been using productivity apps to stay organized but he said they didn’t help him too much to accomplish his long term goals.</p>
+                <p>My friend had an idea of for making a new version of a productivity app and I wanted to help him contextualize the problem and come up with a viable solution. The initial outcome was to build a productivity app for long-term goals and for me was to design user-friendly features and design system of the app’s UI.</p>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <h4>ROLE</h4>
-                <p>UI/UX Design</p>
-                <p>Product Design</p>
-                <p>(Personal Project)</p>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <h4>SKILLS</h4>
-                <p>User Research</p>
-                <p>Prototyping</p>
-                <p>Sketch</p>
-                <p>Invision</p>
+            <div class="col-md-6 col-sm-12 col-xs-12 duration">
+                <h4>Duration</h4>
+                <p>Role: UI/UX Design</p>
+                <p>Jun - Jul 2018</p>
+                <p>Tools: Sketch, InVision</p>
             </div>
         </div>
     </div>
@@ -580,28 +579,16 @@
         <p>Designed for both iOS and Android, <b>Hoy</b> is a to-do list app that manages the tasks for the users so they can <b>easily track their long-term goals</b>, <b>stay on schedule for repetitive tasks</b>, and <b>prioritize their tasks for the day</b> to increase the user's productivity.</p>
 
 
-<!--         <div class="col-md-12 col-sm-12 col-xs-12 thumbnail">
-            <h5 style="padding-left: 15px;">View your long-term task reminders and daily tasks on one page. Complete them and make today your day.</h5>
-        </div>
-
-        <div class="col-md-12 col-sm-12 col-xs-12 thumbnail">
-            <h5 style="padding-left: 15px;">Keep track of your long term through a visual progress bar.</h5>
-        </div>
-
-        <div class="col-md-12 col-sm-12 col-xs-12 thumbnail">
-            <h5 style="padding-left: 15px;">Prioritize your tasks by how difficult you feel would be completing them.</h5>
-        </div> -->
-
     </div>
 
 
-    <div class="container" style="padding-bottom: 50px;">
+   <!--  <div class="container" style="padding-bottom: 50px;">
         <h4>DESIGN PROCESS</h4>
         <div class="thumbnail">
             <img src="assets/Design_Process_2.png">
         </div>
 
-    </div>
+    </div> -->
 
 
     <div class="container">
