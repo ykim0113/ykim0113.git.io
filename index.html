@@ -8,7 +8,13 @@
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
 <!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
  -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Slab" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans|IBM+Plex+Serif&display=swap" rel="stylesheet">
+
+<!-- family
+   font-family: 'IBM Plex Serif', serif;
+  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'IBM Plex Sans', sans-serif;*/ -->
 
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
@@ -26,16 +32,50 @@
 
     <style type=text/css>
 
+        h1 {
+            font-family: 'IBM Plex Serif', serif, Semibold;
+            font-weight: bold;
+            line-height: 1.5em;
+
+        }
+
         h2 {
-            text-align: center;
+           font-family: 'IBM Plex Serif', serif;
+           font-size: 1.1em;
+           font-weight: bold;
+           line-height: 1.5em;
         }
 
         h3 {
-            text-align: center;
+          font-family: 'IBM Plex Serif', serif;
+           font-size: 1.2em;
+           line-height: 1.5em;
+           color: #5C5C5C;
         }
 
         h5 {
             font-size: 17px;
+        }
+
+        a {
+          font-family: 'IBM Plex Mono', monospace;
+          color: #0D19E4;
+          /*text-decoration: none;*/
+
+        }
+
+        p {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.6em;
+
+        }
+
+        .date p {
+          padding-left: 5px;
+          font-family: 'IBM Plex Sans', sans-serif;
+          font-weight: bold;
+          font-size: 14px;
         }
 
         .bg {
@@ -48,12 +88,6 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-
-/*        .shadow:hover {
-             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-        }
-*/
 
         .shadow {
           transition: box-shadow .3s;
@@ -293,7 +327,9 @@
             color: rgba(0, 0, 0, 1.0);
             letter-spacing: 2.28px;
             line-height: 40.0px;
-            font-family: "Roboto", "Apple SD Gothic Neo";
+            font-family: 'IBM Plex Serif', serif;
+/*            font-family: 'IBM Plex Mono', monospace;
+            font-family: 'IBM Plex Sans', sans-serif;*/
         }
 
 
@@ -389,6 +425,14 @@
         /*thumbnail*/
         .thumbnail img {
             border-radius: 4px;
+             transition: box-shadow .3s;
+  /*        width: 300px;
+          height: 500px;*/
+/*          margin: 50px;
+          border-radius:10px;*/
+        /*   border: 1px solid #ccc; */
+          background: #fff;
+          float: left;
         }
 
         .main_sub_button {
@@ -442,71 +486,38 @@
 
 
 
-
     </style>
 
 
 
 </head>
 <body>
-    <header>
-            <nav class = "navbar navbar-default navbar-bg">
-                <div class="container">
-                    <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class=ar"icon-bar"></span>
-                          </button>
+    <header style= "background-color: black;"">
+        <nav style= "background-color: black;" class = "navbar navbar-default navbar-bg">
+            <div class="container">
+                <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class=ar"icon-bar"></span>
+                      </button>
 
-          <!--           </div>
-
-
-                    <ul class ="menu nav navbar-nav">
-                        <li class="menu_item"><a class="menu__link_title hover3" href = "#"><span class="menu__label hover3__label">yeji kim</span></a></li>
-                    </ul>
-
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class ="nav navbar-nav navbar-right">
-                           <li class="menu_item"><a class="menu__link hover3" href = "content.html"><span class="menu__label hover3__label">Work</span></a></li>
-
-                        </ul>
-                    </div> -->
                 </div>
 
-            <div class="jumbotron">
 
-                    <!-- Apple SD Gothic Neo / Semibold -->
+                <ul class ="nav navbar-nav">
+                    <li><a href = "#"><span class="menu__label hover3__label" style="font-family: 'IBM Plex Sans'; color: #0D19E4; font-weight: bold;">yeji kim</span></a></li>
+                </ul>
 
-                        <h1>Hi I'm Ye-Ji, a UI/UX Designer</h1>
-
-
-                     <!--    <h1><span class = "highlight" style="background-color: #FFE076;font-weight:400;">UX/UI Designer</span>.</h1> -->
-
-
-                    <!-- roboto / light-->
-                    <div claa="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="container container_title">
-                   <!--              <p>I am a <b>visual thinker</b> with passion for human-centered design, visual design, and resolving problems! I'm currently looking for Spring internship opportunities that can challenge myself to grow in different perspectives.</p> -->
-                                  <p>Computational Media student at Georgia Tech / Passionate in human-centered design and user experience / Looking for design internship for Summer 2019 </p>
-                            </div>
-                        </div>
-
-           <!--              <div class="col-md-8 col-sm-12 col-xs-12">
-                            <div class="container">
-                                <div class="container">
-                                    <div class="fab">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                    </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class ="nav navbar-nav navbar-right">
+                       <li><a href = "content.html"><span style = "font-family: 'IBM Plex Mono'; font-size: 0.8em;">Projects</span></a></li>
+                       <li><a href = "content.html"><span style = "font-family: 'IBM Plex Mono'; font-size: 0.8em;">About</span></a></li>
+                       <li><a href = "content.html"><span style = "font-family: 'IBM Plex Mono'; font-size: 0.8em;">Resume</span></a></li>
+                    </ul>
+                </div>
             </div>
-
 
 
         </nav>
@@ -514,157 +525,138 @@
 
 
 
+
+
+         <div class="container">
+            <h1 style = "line-height: 2em; color:#D4D4D4;">I'm a big fan of user research and designing meaningful solutions from it.</h1>
+        </div>
+
+
+
+
+
     </header>
 
-
-
-
-
-    <!-- Grid System of photos -->
-    <div class="container content-container">
-
-
-        <!-- 2 col that 2 col for medium screen, 2 col for small, 1 for xsmall -->
-        <!-- Can get rid of lg (or the larger breakpoint) > Bootstrap will know
-        the same restriction continues from large -> medium -->
-
-            <div class="col-md-12 col-sm-12 col-xs-12 thumbnail shadow">
-                <img src="assets/hoy_cover2.png">
-            </div>
-
-
+    <!-- Projects -->
+    <div class="container">
+        <div class = "col-md-6 col-sm-12 col-xs-12">
+              <h2>PROJECTS</h2>
+          <h3>I look forward to solving different design problems, which I did in <b>Service design</b>
+        and <b>Interaction design</b> while studying abroad in Sweden. </h3>
+        </div>
     </div>
+
+
+    <div class= "container">
+        <div class="row">
+
+              <div class="col-md-6 col-sm-12 col-xs-12" style="padding-bottom: 60px;">
+                  <div class = "date"><p>Mar - Jun 2019</p></div>
+                  <div class="thumbnail" ><img src="assets/sd_cover.jpg"></div>
+                  <h1>Home Care Service Design</h1>
+                  <p>Improving safety of patients receiving home care service through Swedish healthcare system.</p>
+                   <a href="file:///Users/YEJIKIM/Desktop/yjk/job/profileWeb.io/ykim0113.github.io/hoy.html" style="color: #0D19E4; text-decoration: none; ">View Case Study ></a>
+              </div>
+
+            <div class="col-md-6 col-sm-12 col-xs-12" style="padding-bottom: 60px;">
+               <div class = "date"><p>Jan - Mar 2019</p></div>
+                <div class="thumbnail" ><img src="assets/prism_cover.png"></div>
+                <h1>Prism</h1>
+                <p>Designing interactions of digital toy inspired by Yayoi Kusama's Infinity Room</p>
+                <a href="file:///Users/YEJIKIM/Desktop/yjk/job/profileWeb.io/ykim0113.github.io/hoy.html" style="color: #0D19E4; text-decoration: none;">View Case Study > </a>
+             </div>
+
+
+       </div>
+     </div>
+
+
+    <!-- Case study -->
+    <div class="container">
+      <div class = "col-md-6 col-sm-12 col-xs-12">
+        <h2>CASE STUDY</h2>
+        <h3>I love (re)designing products for better user experiences. </h3>
+      </div>
+    </div>
+
 
     <div class="container">
+          <div class="row"">
+
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class = "date"><p>Mar 2018</p></div>
+                    <div class="thumbnail"><img class="shadow" src="assets/delta_cover.jpg"></div>
+                </div>
+
+
+
+              <div class="col-md-6 col-sm-12 col-xs-12" style="padding-bottom: 60px;">
+                  <h1>Delta Ticket Redesign</h1>
+                  <p>Designing a more intuitive ticket to enhance boarding experience for international passengers.</p>
+                  <a href="file:///Users/YEJIKIM/Desktop/yjk/job/profileWeb.io/ykim0113.github.io/hoy.html" style="color: #0D19E4; text-decoration: none;">View Case Study > </a>
+              </div>
+
+          </div>
+    </div>
+
+      <!-- Case study -->
+    <div class="container">
+      <div class = "col-md-6 col-sm-12 col-xs-12">
+        <h2>SIDE PROJECT</h2>
+        <h3>My best areas of (self) improvement in UX design, mostly for <b>digital experiences</b>. </h3>
+      </div>
+    </div>
+
+     <div class="container">
                 <div class="row" style="padding-top: 0px;margin-left: 30px;margin-right: 30px;">
-                    <div class="col-md-4 col-sm-12 col-xs-12 main_subtitle">
-                        <h4 style="margin-top: 12px;">PRODUCT DESIGN . UI / UX</h4>
-                        <h3 style="font-weight: 700;">Hoy</h3>
-                    </div>
 
-                   <div class="col-md-4 col-sm-12 col-xs-12 main_subtitle" style="margin-top: 10px;">
-                        <p>To-do app that helps users stay productive
-                        with long-term goals</p>
-                    </div>
+                      <!-- Grid System of photos -->
 
-                    <div class="col-md-4 col-sm-12 col-xs-12 main_subtitle text-center" style="padding-left:10px;padding-left: 50px;">
-                         <button class="btn btn-default main_sub_button ripple" style="width:100%; border-radius:6px;margin-top: 5px;padding-top: 10px;"><a href="file:///Users/YEJIKIM/Desktop/yjk/job/profileWeb.io/ykim0113.github.io/hoy.html" style="color: #6482E8; text-decoration: none;">UX PROCESS</a></button>
+
+
+                            <!-- 2 col that 2 col for medium screen, 2 col for small, 1 for xsmall -->
+                            <!-- Can get rid of lg (or the larger breakpoint) > Bootstrap will know
+                            the same restriction continues from large -> medium -->
+
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class = "date"><p>Jun - Jul 2018</p></div>
+                            <div class="thumbnail" ><img class="shadow" src="assets/hoy_cover.jpg"></div>
+                        </div>
+
+
+
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <h1>Hoy</h1>
+                        <p>A fictional project management app designed to help one accomplish long term goals.</p>
+                        <a href="file:///Users/YEJIKIM/Desktop/yjk/job/profileWeb.io/ykim0113.github.io/hoy.html" style="color: #0D19E4; text-decoration: none;">View Case Study > </a>
                     </div>
 
                 </div>
     </div>
 
-     <div class="thumbnail">
-            <img scr="assets/hoy_cover_underline.jpg">
-    </div>
-
-
-
-
-
-<!--
-            <div class = "col-md-12 col-sm-12 col-xs-12 main_card shadow">
-
-
-                <div class="col-md-8 col-sm-12 col-xs-12 thumbnail">
-                    <img src="assets/treeAtlantaCover.png">
-
-                </div>
-
-
-                    <div class="col-md-4 col-sm-12 col-xs-12 main_subtitle">
-                            <div class="container" style="padding-left:0">
-                                <h4>BRANDING . LOGO DESIGN</h4>
-                                <h3 >Trees Atlanta</h3>
-                                <p>Re-defining brand identity and logo for <br>non-profit organization <a href="https://treesatlanta.org" style="text-decoration: none; color: black"><u>Trees Atlanta</u></a></p>
-
-                            </div>
-
-                    </div>
-            </div> -->
-
-
-
-
-
-  <!--       <div class="col-md-12 col-sm-12 col-xs-12 thumbnail">
-            <img src="assets/hoy.png">
-        </div> -->
-
- <!--        <div class="col-md-12 col-sm-12 col-xs-12 thumbnail">
-            <img src="assets/treeAtlantaCover.png">
-        </div> -->
-
-
-
-
-
-
-<!--     <div class="container">
-        <div class="row">
-          <div class = "col-md-8 col-sm-12 col-xs-12">
-              <h5><b>HELLO THERE,</b></h5>
-              <p>I am a rising Junior studying Compuational Media at Georgia Tech. A visual thinker and <br>problem solver, I love questioning <i>"WHY"</i> and going through
-              the journey of finding the answer.</p>
-              <p>Currently I am designing a todo list app, learning about UX Design, and trying out building <br>apps in Flutter.</p>
-          </div>
-          <div class = "col-md-4 col-sm-12 col-xs-12">
-              <h5><b>TOOLS</b></h5>
-              <p>Sketch</p>
-              <p>InVision</p>
-              <p>Android Studio</p>
-              <p>Photoshop / Illustrator / InDesign</p>
-              <p>HTML/CSS</p>
-          </div>
-
-        </div>
-    </div> -->
-
-    <!-- Footer -->
-    <!--
-        Medium
-        BeHance
-        InVision
-
-     -->
 
 
     <!-- Footer -->
-    <!-- <footer>
-    <div class ="row">
-            <div class ="col-md-6 col-sm-12 col-xs-12">
-                  <h3 style="align-content: center;">I'd love to stay in touch with you</h3>
-                  <p style="font-size: 12px;">© Made by Ye-Ji Kim</p>
-            </div>
+    <footer>
+      <div class="container">
+        <div class ="row">
+              <div class ="col-md-6 col-sm-12 col-xs-12" style="align-content: center;">
+                    <div class="thumbnail"><img width = "150" height = "150" src="assets/profile_pic.png"></div>
+              </div>
 
+             <div class ="col-md-6 col-sm-12 col-xs-12">
+                <p>About</p>
+                <h3 style="color:black">Hey hey 🙋 I’m a student at Georgia Tech studying Computational Media (CS + Design) with focus on psychology and UX design. Feel free to reach out for collaboration or a friendly hello! I’m always looking for opportunities to connect.</h3>
+                  <h3><a href="file:///Users/YEJIKIM/Desktop/yjk/job/profileWeb.io/ykim0113.github.io/hoy.html" style= "color: #0D19E4; font-family: 'IBM Plex Serif'; font-weight:bold;">ykim0113@gmail.com</a></h3>
+                </h3>
+                <h2><a href = "https://www.linkedin.com/in/ye-ji-kim/" style="color:black; font-family: 'IBM Plex Serif'; font-weight:bold;">LinkedIn</a> / <a href = "https://www.linkedin.com/in/ye-ji-kim/" style="color:black; font-family: 'IBM Plex Serif'; font-weight:bold;">Behance</a> / <a href = "https://www.linkedin.com/in/ye-ji-kim/" style="color:black; font-family: 'IBM Plex Serif'; font-weight:bold;">Instagram</a></h2>
+             </div>
 
-
-           <div class ="col-md-6 col-sm-12 col-xs-12">
-                <div class="row">
-                    <div class ="col-md-3 col-sm-12 col-xs-12">
-                        <p>Contact me</p>
-                    </div>
-                    <div class ="col-md-9 col-sm-12 col-xs-12">
-                        <p><a href="mailto:ykim0113@gmail.com" style="color: black;">ykim0113@gmail.com</a></p>
-                    </div>
-                </div>
-
-                <div class="row">
-                     <div class ="col-md-6 col-sm-12 col-xs-12">
-                            <p>Find me</p>
-                    </div>
-                    <div class ="col-md-2 col-sm-12 col-xs-12">
-                        <p><a href="#" style="color: black;">Medium</a></p>
-                    </div>
-
-                </div>
-           </div>
-
-     </div>
+      </div>
 
     </footer>
 
- -->
+
 
 
 </body>

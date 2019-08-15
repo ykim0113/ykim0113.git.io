@@ -4,6 +4,17 @@
  * Licensed under the MIT license
  */
 
+
+// Text animation
+$(document).ready(restart());
+
+function restart(){
+  $('.text').css({'top': '40px'}),
+  $('.text').css({'display': 'none'}),
+  $('.text').animate({'top': 0}, {"duration":2000,"queue":false});
+  $('.text').fadeIn(2000);
+}
+
 if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery')
 }
