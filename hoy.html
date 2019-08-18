@@ -511,6 +511,24 @@
     /*    .content img {
           border: 10px #979797;
         }*/
+
+        /* The overlay effect - lays on top of the container and over the image */
+      /* Container holding the image and the text */
+        .overlay_container {
+          position: relative;
+          text-align: center;
+          color: white;
+        }
+
+       /* Centered text */
+        .centered {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+
     </style>
 </head>
 <body>
@@ -574,18 +592,24 @@
         </nav> -->
 
     </header>
-<!--
-    <div class ="jumbotron">
-        <div class="thumbnail">
-            <img src="assets/hoy_content.png">
-        </div>
+
+
+    <!-- Layer -->
+    <!-- <div class="container">
+      <img src="img_snow_wide.jpg" alt="Snow" style="width:100%;">
+      <div class="bottom-left">Bottom Left</div>
+      <div class="top-left">Top Left</div>
+      <div class="top-right">Top Right</div>
+      <div class="bottom-right">Bottom Right</div>
+      <div class="centered">Centered</div>
     </div> -->
 
-<!--     <div class="thumbnail">
-        <img src="assets/hoy_content.png">
-    </div> -->
 
-    <img style="max-height: 100%; max-width: 100%;"; src ="assets/hoy/hoy_cover.jpg">
+    <div class="overlay_container">
+     <img class="image" style="max-height: 100%; max-width: 100%; opacity: 70%"; src ="assets/hoy/hoy_cover.jpg">
+      <div class="centered"><h2>An app to help you accomplish your long term goals</h2></div>
+    </div>
+
 <!--
     <div class ="container">
         <h1>Hoy</h1>
